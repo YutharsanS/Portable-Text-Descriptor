@@ -31,12 +31,11 @@ An embedded OCR (Optical Character Recognition) application designed to assist v
 
 ### Phase 1: Foundation & Research (Weeks 1-3)
 **Objectives:** Establish development environment and research baseline
-- [ ] Literature review on embedded OCR systems
-- [ ] Platform selection and development environment setup
+- [X] Literature review on embedded OCR systems
+- [X] Platform selection and development environment setup
 - [ ] Basic camera interface implementation
 - [ ] Performance benchmarking framework
 - [ ] Initial project structure and build system
-- [ ] Familiarizing with Image Processing concepts
 
 **Deliverables:**
 - Development environment documentation
