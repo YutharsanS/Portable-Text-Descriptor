@@ -25,24 +25,7 @@ An embedded OCR (Optical Character Recognition) application designed to assist v
 - ***Cross-platform compatibility** (Android smartphones, embedded devices)
 
 ## Architecture
-```
-┌─────────────────────────────────────┐
-│           User Interface            │
-├─────────────────────────────────────┤
-│         Audio Synthesis (TTS)       │
-├─────────────────────────────────────┤
-│       Character Recognition         │
-│     (Custom First-Principles)       │
-├─────────────────────────────────────┤
-│      Text Detection & Segmentation  │
-├─────────────────────────────────────┤
-│       Image Preprocessing Pipeline  │
-├─────────────────────────────────────┤
-│      Hardware Abstraction Layer     │
-├─────────────────────────────────────┤
-│     Camera | Audio | Display | GPU  │
-└─────────────────────────────────────┘
-```
+<img width="1480" height="2400" alt="Business process flow example(1)" src="https://github.com/user-attachments/assets/6b97bc7f-6eef-4439-8b52-a13231b89e03" />
 
 ## Development Timeline
 
