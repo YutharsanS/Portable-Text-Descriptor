@@ -1,0 +1,9 @@
+typeguard
+opencv-python
+pillow
+numpy
+pytesseract
+scikit-image
+matplotlib
+jupyter
+pytest

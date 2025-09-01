@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PortableTextDescriptor"
 include(":app")
+// include(":open-cv")
