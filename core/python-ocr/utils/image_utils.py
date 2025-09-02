@@ -56,9 +56,26 @@ def resize_image(image: np.ndarray, max_width: int = 1920, max_height: int = 108
     scale_w = max_width / w
     scale_h = max_height / h
 
-    scale = min(scale_w, scale_h)
+    scale = min(scale_w, scale_h, 1.0) # can't upscale, because we are using INTER_AREA which
 
     new_w = w * scale
     new_h = h * scale
 
-    return cv2.resize(image, (new_w, new_h), interpolation=cv2.INTER_AREA)
+    return cv2.resize(image, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
+
+def convert_to_grayscale(image: np.ndarray) -> np.ndarray:
+    """Convert images to grayscale"""
+    if image.ndim == 3:
+        return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) # eliminate double conversion exception
+    return image
+
+def get_image_info(image: np.ndarray) -> dict:
+    """Get basic information about image"""
+
+    return {
+        'shape': image.shape,
+        'dtype': image.dtype,
+        'min_value': image.min(),
+        'max_value': image.max(),
+        'mean_value': image.mean()
+    }
