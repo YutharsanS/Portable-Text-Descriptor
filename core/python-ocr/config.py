@@ -12,7 +12,8 @@ OUTPUT_DIR = PROJECT_ROOT / "output"
 # Tessaract Settings
 
 # Image Processing parameters
-
+MAX_IMAGE_WIDTH = 512
+MAX_IMAGE_HEIGHT = 512
 # Performance settings
 
 # Debugging

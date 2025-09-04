@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__) # module's name, specific to module
 
 # Utils functions
-def load_images(image_path: Union[str, Path]) -> Optional[np.ndarray]: # either None, or numpy array
+def load_image(image_path: Union[str, Path]) -> Optional[np.ndarray]: # either None, or numpy array
     """
     Load image from file path as an RGB image
     """
@@ -39,7 +39,7 @@ def save_image(image: np.ndarray, output_path: Union[str, Path]) -> bool:
     output_path = str(output_path)
 
     if len(image.shape) == 3 :
-        image_bgr = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
     else:
         image_bgr = image
 
@@ -66,7 +66,7 @@ def resize_image(image: np.ndarray, max_width: int = 1920, max_height: int = 108
 def convert_to_grayscale(image: np.ndarray) -> np.ndarray:
     """Convert images to grayscale"""
     if image.ndim == 3:
-        return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) # eliminate double conversion exception
+        return cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) # eliminate double conversion exception
     return image
 
 def get_image_info(image: np.ndarray) -> dict:
@@ -79,3 +79,10 @@ def get_image_info(image: np.ndarray) -> dict:
         'max_value': image.max(),
         'mean_value': image.mean()
     }
+
+# When you need RGB for visualization:
+def bgr_to_rgb(image: np.ndarray) -> np.ndarray:
+    """Convert BGR to RGB for visualization"""
+    if image.ndim == 3:
+        return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    return image
