@@ -14,6 +14,9 @@ OUTPUT_DIR = PROJECT_ROOT / "output"
 # Image Processing parameters
 MAX_IMAGE_WIDTH = 512
 MAX_IMAGE_HEIGHT = 512
+
+BILATERAL_FILTER_D = 9
+BILATERAL_FILTER_SIGMA = 50
 # Performance settings
 
 # Debugging
