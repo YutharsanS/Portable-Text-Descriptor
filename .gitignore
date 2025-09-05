@@ -53,3 +53,8 @@ local.properties
 .venv/
 venv/
 __pycache__
+
+# images
+*.png
+*.jpg
+*.jpeg

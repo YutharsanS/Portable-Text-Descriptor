@@ -26,7 +26,9 @@ class TestUtils:
             path = tmp.name
         try:
             assert image_utils.save_image(img, path)
-            loaded = image_utils.load_images(path)
+            
+            loaded = image_utils.load_image(path)
+
             assert loaded is not None
             assert loaded.shape == img.shape
             # Check pixel values
