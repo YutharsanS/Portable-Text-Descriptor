@@ -17,6 +17,7 @@ MAX_IMAGE_HEIGHT = 512
 
 BILATERAL_FILTER_D = 9
 BILATERAL_FILTER_SIGMA = 50
+
 # Performance settings
 
 # Debugging

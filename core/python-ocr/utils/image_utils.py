@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__) # module's name, specific to module
 
 # Utils functions
 def load_image(image_path: Union[str, Path]) -> Optional[np.ndarray]: # either None, or numpy array
+
     """
     Load image from file path as an RGB image
     """
@@ -67,6 +68,7 @@ def convert_to_grayscale(image: np.ndarray) -> np.ndarray:
     """Convert images to grayscale"""
     if image.ndim == 3:
         return cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) # eliminate double conversion exception
+
     return image
 
 def get_image_info(image: np.ndarray) -> dict:
